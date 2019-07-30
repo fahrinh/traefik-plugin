@@ -1,0 +1,30 @@
+debug = true
+
+[api]
+
+[entryPoints]
+    [entryPoints.http]
+    address = ":7080"
+    [entryPoints.https]
+    address = ":7043"
+
+[plugin]
+    [plugin.matchers.mymatch]
+    path = "./mymatcher.so"
+
+[accessLog]
+
+[file]
+watch = true
+
+[backends.backend1.servers.server0]
+url = "http://localhost:8000/"
+weight = 10
+
+[frontends]
+  [frontends.frontend1]
+  backend = "backend1"
+    [frontends.frontend1.routes]
+      [frontends.frontend1.routes.route0]
+      rule = "Matcher: mymatch"
+
