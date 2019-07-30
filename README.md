@@ -4,7 +4,7 @@ Traefik (Go) plugin samples. Enhance Traefik with your custom matcher &amp; midd
 
 ## Usage
 
-1. Create a dir where we dump traefik binary, plugin (`mymatcher.so`) & sample config (`traefik.toml`)
+1. Create a dir where we dump traefik binary, our plugin (`mymatcher.so`) & sample config (`traefik.toml`)
    ```
    mkdir traefik-playground
    cd traefik-playground
@@ -37,7 +37,7 @@ Traefik (Go) plugin samples. Enhance Traefik with your custom matcher &amp; midd
    ./traefik
    ```
 
-5. If we hit GET to `http://localhost:7080/` (Traefik http entrypoint) with request body `hello', http request will be forwarded to python backend.
+5. If we hit GET to `http://localhost:7080/` (Traefik http entrypoint) with request body `hello`, http request will be forwarded to python backend.
 
 ## Plugin Support
 
@@ -48,7 +48,7 @@ Load() interface{}
 MatcherFunc (req *http.Request) bool
 ```
 
-See this sample matcher plugin for a full example.
+See [this sample matcher plugin](https://github.com/tiket-libre/traefik-plugin/blob/master/matcher/mymatcher.go) for a full example.
 
 In a frontend rule, use our custom matcher (`Matcher` keyword) which refers to matcher var in the matcher plugin declaration.
 
