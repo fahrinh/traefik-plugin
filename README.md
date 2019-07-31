@@ -67,6 +67,9 @@ In a frontend rule, use our custom matcher by using `Matcher` keyword which refe
       rule = "Matcher: mymatch"
 ```
 
+## Caveats
+
+- Plugin hot reloading is not yet supported.
 
 
 
