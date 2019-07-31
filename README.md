@@ -12,7 +12,7 @@ Traefik (Go) plugin samples. Enhance Traefik with your custom matcher &amp; midd
 2. Build Traefik (based on v1.7.2) with go plugin support
 
     ```
-    git clone -b goplugin-matcher https://github.com/fahrinh/traefik $GOPATH/src/github.com/containous/traefik
+    git clone -b goplugin-matcher https://github.com/tiket-libre/traefik $GOPATH/src/github.com/containous/traefik
     GOGC=off go build github.com/containous/traefik/cmd/traefik
     ```
 3. Build custom matcher plugin
