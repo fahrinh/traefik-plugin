@@ -50,7 +50,7 @@ MatcherFunc (req *http.Request) bool
 
 See [this sample matcher plugin](https://github.com/tiket-libre/traefik-plugin/blob/master/matcher/mymatcher.go) for a full example.
 
-In a frontend rule, use our custom matcher (`Matcher` keyword) which refers to matcher var in the matcher plugin declaration.
+In a frontend rule, use our custom matcher by using `Matcher` keyword which refers to matcher var in the matcher plugin declaration.
 
 ```toml
 [plugin]
